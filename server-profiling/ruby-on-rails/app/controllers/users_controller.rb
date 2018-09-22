@@ -1,3 +1,5 @@
+require 'csv'
+
 class UsersController < ApplicationController
   include BCrypt
 
@@ -26,6 +28,11 @@ class UsersController < ApplicationController
 
   def show
     render html: "Hello World, #{request.params['id']}!", status: 200
+  end
+
+  def csv
+    sleep 0.1
+    render html: 'Hello World!', status: 200
   end
 
   private

@@ -1,5 +1,6 @@
 var express = require('express');
 var crypto = require('crypto');
+
 var app = express();
 
 function createUsers() {
@@ -39,6 +40,12 @@ app.get('/users', (req, res) => {
 
 app.get('/users/:id', (req, res) => {
   res.status(200).send('Hello World, ' + req.params.id + '!');
+});
+
+app.get('/non-blocking', (req, res) => {
+  setTimeout(() => {
+    res.status(200).send('Hello World!');
+  }, 100);
 });
 
 app.listen(3001, function () {

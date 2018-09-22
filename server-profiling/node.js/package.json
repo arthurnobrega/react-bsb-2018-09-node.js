@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "count-lines-in-file": "^1.1.0",
+    "express": "^4.16.3",
+    "fast-csv": "^2.4.1"
   }
 }
