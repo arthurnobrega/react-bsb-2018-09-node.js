@@ -1,0 +1,7 @@
+python -m timeit "__import__('os').system('python2 python.py')"
+499500
+100 loops, best of 3: 7.56 msec per loop
+
+python -m timeit "__import__('os').system('python3 python.py')"
+499500
+100 loops, best of 3: 19.6 msec per loop
